@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: row;
     width: auto;
-    height: 40vh;
+    height: 35vh;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 0.5vh;;
 }
 
 .table {
@@ -12,7 +12,7 @@
     grid-template-areas:
         'user1 user2'
         'user3 user4';
-    grid-gap: 10px;
+    grid-gap: 0.5vh;
     background-color: black;
     border-radius: 10px;
     height: 100%;
@@ -21,9 +21,15 @@
 }
 
 .user1 {grid-area: user1;}
-.user2 {grid-area: user1;}
-.user3 {grid-area: user1;}
-.user4 {grid-area: user1;}
+.user2 {grid-area: user2;}
+.user3 {grid-area: user3;}
+.user4 {grid-area: user4;}
+
+.table > div {
+    color: white;
+    text-align: center;
+    background-color: grey;
+}
 
 .tableName {
     color: white;
@@ -35,6 +41,31 @@
     background-color: black;
     border-radius: 10px;
     width: 18vw;
-    height: 16vh;
+    height: 18vh;
     margin: 0 auto;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: 0.9vh;
+}
+
+.action {
+    /* some styling for the buttons */
+    border-radius: 4px;
+    width: 15vw;
+    font-size: 1.5rem;
+}
+
+.leave {
+    background-color: red;
+    color: white;
+    vertical-align: middle;
+    border-radius: 4px;
+    width: 15vw;
+    font-size: 1.5rem;
 }
