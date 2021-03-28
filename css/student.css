@@ -31,6 +31,7 @@ video {
     grid-template-columns: repeat(auto-fill, 20vw);
     grid-auto-rows: 25vh;
     margin: 20px;
+    place-content: center;
 }
 
 .toolbar {
