@@ -21,19 +21,29 @@ app.get('/', (req, res) => {
 	res.sendFile(path);
 });
 
+
 app.get('/new-room', (req, res) => {
-	res.redirect(`/${uuidV4()}`)
+	res.redirect(`/new-room/${uuidV4()}`)
+})
+
+app.get('/new-room/:room', (req, res) => {
+	res.render('room', { roomId: req.params.room })
 })
 
 app.get('/new-room-student', (req, res) => {
-	res.redirect(`/views/student.ejs'`);
-})
-app.get('/new-room-teacher', (req, res) => {
-	res.redirect(`/${uuidV4()}`)
+	res.redirect(`/new-room-student/${uuidV4()}`)
 })
 
-app.get('/:room', (req, res) => {
-	res.render('room', { roomId: req.params.room })
+app.get('/new-room-student/:room', (req, res) => {
+	res.render('student', { roomId: req.params.room })
+})
+
+app.get('/new-room-teacher', (req, res) => {
+	res.redirect(`/new-room-teacher/${uuidV4()}`)
+})
+
+app.get('/new-room-teacher/:room', (req, res) => {
+	res.render('teacher', { roomId: req.params.room })
 })
 
 io.on('connection', socket => {
