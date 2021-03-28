@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>Hello World</div>
-    <button id="newRoom">click to open new room</button>
-    <button id="student">GET STARTED</button>
-    <button id="teacher">GET STARTED</button>
+    <div class="intro-container">
+        <div class="intro-wrapper">
+            <h3 class="intro-title">Welcome user <span id="username"></span></h3>
+            <div class="button-container">
+                <button id="student">Student View</button>
+                <button id="teacher">Teacher View</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script>
-    let roomButton = document.getElementById("newRoom");
     let studentButton = document.getElementById("student");
     let teacherButton = document.getElementById("teacher");
-    roomButton.addEventListener('click', function(e){
-		e.preventDefault();
-		fetch('/new-room')
-			.then(response => {
-				if (response.redirected) {
-					window.location.href = response.url;
-				}
-			})
-			.catch(function(err) {
-				console.info(err + " url: " + url);
-			});
-    })
+
+    document.getElementById('username').innerText = Math.random().toString(36).substr(2, 9);
+
 	studentButton.addEventListener('click', function(e){
 		e.preventDefault();
 		fetch('/new-room-student')

@@ -1,0 +1,31 @@
+.intro-container{
+    width: auto;
+    height: auto;
+    margin: auto;
+    border: black 2px solid;
+}
+
+.intro-wrapper{
+    border: black 2px solid;
+}
+.intro-title{
+    text-align: center;
+}
+
+.button-container{
+    align-self: center;
+    margin: auto;
+    border: black 2px solid;
+
+}
+
+button{
+    text-align: center;
+    display: inline-block;
+    padding: 16px 35px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 40px;
+    outline: none;
+    margin: 20px 40px;
+}
