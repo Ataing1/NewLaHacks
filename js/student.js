@@ -1,5 +1,6 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
+const teachGrid = document.getElementById('teacher-video')
 const myPeer = new Peer();
 const myVideo = document.createElement('video')
 myVideo.muted = true
@@ -49,5 +50,13 @@ function addVideoStream(video, stream) {
 	video.addEventListener('loadedmetadata', () => {
 		video.play()
 	})
-	videoGrid.append(video)
+	if(!teachGrid.hasChildNodes()){
+		console.log("teach has no child");
+		teachGrid.appendChild(video);
+	}else{
+		console.log("adding  student");
+		videoGrid.append(video)
+	}
+
+
 }

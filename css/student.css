@@ -4,10 +4,10 @@
 
 .teacherPanel {
     background-color: black;
-    margin: 20px;
+    margin: 20px auto;
 
     height: 60vh;
-    width: 95vw;
+    width: 60vw;
     border-radius: 10px;
 }
 
