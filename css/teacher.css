@@ -21,9 +21,15 @@
 }
 
 .user1 {grid-area: user1;}
-.user2 {grid-area: user1;}
-.user3 {grid-area: user1;}
-.user4 {grid-area: user1;}
+.user2 {grid-area: user2;}
+.user3 {grid-area: user3;}
+.user4 {grid-area: user4;}
+
+.table > div {
+    color: white;
+    text-align: center;
+    background-color: grey;
+}
 
 .tableName {
     color: white;
