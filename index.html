@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="intro-container">
-        <img src="https://media.istockphoto.com/photos/old-school-chalkboard-picture-id589091614?k=6&m=589091614&s=170667a&w=0&h=aNjHM6l20mfCl9pbB3wA5h22egPi0YXhqk193FaNFjk=" id="bg" alt="">
+        <img src="https://media.istockphoto.com/photos/old-school-chalkboard-picture-id589091614?k=6&m=589091614&s=170667a&w=0&h=aNjHM6l20mfCl9pbB3wA5h22egPi0YXhqk193FaNFjk="
+            id="bg" alt="">
         <div>
-            <h3 class="intro-title">Welcome user <span id="username"></span></h3>
+            <h3 class="intro-title">Welcome to Tables!</h3>
             <div class="button-container">
-                <button id="student">Student View</button>
-                <button id="teacher">Teacher View</button>
+                <button class=card id="student">
+                    <img src="./img/student.jfif"
+                        alt="Avatar" style="width:100%; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    <div class="container">
+                        <h4><b>Student View</b></h4>
+                    </div>
+                </button>
+                <button class=card id="teacher">
+                    <img src="./img/teacher.jfif"
+                        alt="Avatar" style="width:100%; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    <div class="container">
+                        <h4><b>Teacher View</b></h4>
+                    </div>
+                </button>
             </div>
         </div>
     </div>
@@ -22,34 +37,35 @@
     let studentButton = document.getElementById("student");
     let teacherButton = document.getElementById("teacher");
 
-    document.getElementById('username').innerText = Math.random().toString(36).substr(2, 9);
+    //document.getElementById('username').innerText = Math.random().toString(36).substr(2, 9);
 
-	studentButton.addEventListener('click', function(e){
-		e.preventDefault();
-		fetch('/new-room-student')
-			.then(response => {
-				if (response.redirected) {
-					window.location.href = response.url;
-				}
-			})
-			.catch(function(err) {
-				console.info(err + " url: " + url);
-			});
-	})
-	teacherButton.addEventListener('click', function(e){
-		e.preventDefault();
-		fetch('/new-room-teacher')
-			.then(response => {
-				if (response.redirected) {
-					window.location.href = response.url;
-				}
-			})
-			.catch(function(err) {
-				console.info(err + " url: " + url);
-			});
-	})
+    studentButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        fetch('/new-room-student')
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                }
+            })
+            .catch(function (err) {
+                console.info(err + " url: " + url);
+            });
+    })
+    teacherButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        fetch('/new-room-teacher')
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                }
+            })
+            .catch(function (err) {
+                console.info(err + " url: " + url);
+            });
+    })
 
 
 
 </script>
+
 </html>
