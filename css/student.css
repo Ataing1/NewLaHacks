@@ -16,19 +16,27 @@
     font-size: 1.2rem;
 }
 
-.user {
+video {
     background-color: black;
     border-radius: 10px;
+    /*
     height: 95%;
     width : 25vw;
+    */
     margin : auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
+#video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30vh);
+    grid-auto-rows: 95vw;
+    /*
     width: 95vw;
     height: 30vh;
+    */
     margin: auto;
 }
 
