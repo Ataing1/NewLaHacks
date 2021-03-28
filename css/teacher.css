@@ -1,0 +1,30 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 40vh;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.table {
+    background-color: black;
+    border-radius: 10px;
+    height: 100%;
+    width: 32vw;
+    margin: 0 auto;
+}
+
+.tableName {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.teacherPanel {
+    background-color: black;
+    border-radius: 10px;
+    width: 18vw;
+    height: 16vh;
+    margin: 0 auto;
+}
