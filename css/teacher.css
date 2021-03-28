@@ -8,12 +8,22 @@
 }
 
 .table {
+    display: grid;
+    grid-template-areas:
+        'user1 user2'
+        'user3 user4';
+    grid-gap: 10px;
     background-color: black;
     border-radius: 10px;
     height: 100%;
     width: 32vw;
     margin: 0 auto;
 }
+
+.user1 {grid-area: user1;}
+.user2 {grid-area: user1;}
+.user3 {grid-area: user1;}
+.user4 {grid-area: user1;}
 
 .tableName {
     color: white;
