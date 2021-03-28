@@ -5,6 +5,15 @@
     border: black 2px solid;
 }
 
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: auto;
+    border: white 2px solid;
+}
+
 body{
     background-image: url("../img/blackboard.png");
     background-size: 100%;
