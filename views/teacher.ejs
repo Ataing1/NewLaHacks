@@ -73,5 +73,20 @@
         </div>
     </div>
 </body>
+<script>
+    let walkGroup = document.getElementById('video-grid');
+    walkGroup.addEventListener('click', function (e){
+		e.preventDefault();
+		fetch('/new-room-student')
+			.then(response => {
+				if (response.redirected) {
+					window.location.href = response.url;
+				}
+			})
+			.catch(function(err) {
+				console.info(err + " url: " + url);
+			});
+    })
+</script>
 
 </html>
