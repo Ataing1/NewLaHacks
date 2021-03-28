@@ -4,7 +4,7 @@
     width: auto;
     height: 35vh;
     margin: auto;
-    margin-top: 0.5vh;;
+    margin-top: 1vh;;
 }
 
 #video-grid {
@@ -24,6 +24,26 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.fake-video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 15.5vw);
+    grid-auto-rows: 17vh;
+    height: 100%;
+    width: 32vw;
+    margin: 0 auto;
+    grid-gap: 0.5vh;
+}
+
+.fake-video {
+    background-color: black;
+    border-radius: 10px;
+    margin:auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    content:url(https://images.ctfassets.net/p0qf7j048i0q/6UM0DTikFfdNvAu5jym5x9/c7ab7310b07ff8613ec0232135d5d9c9/G1155346217.jpg?w=1000&h=750&fit=fill&fm=webp);
 }
 
 .table {
