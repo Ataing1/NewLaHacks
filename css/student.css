@@ -1,0 +1,55 @@
+.page {
+    background-color : grey;
+}
+
+.teacherPanel {
+    background-color: black;
+    margin: auto;
+    height: 60vh;
+    width: 95vw;
+    border-radius: 10px;
+}
+
+.userName {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.user {
+    background-color: black;
+    border-radius: 10px;
+    height: 95%;
+    width : 25vw;
+    margin : auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 30vh;
+    margin: auto;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.action {
+    /* some styling for the buttons */
+    border-radius: 4px;
+    width: 15vw;
+}
+
+.leave {
+    background-color: red;
+    color: white;
+    vertical-align: middle;
+    border-radius: 4px;
+    width: 15vw;
+}
