@@ -9,8 +9,12 @@
 
 #video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 10vw);
-    grid-auto-rows: 10vh;
+    grid-template-columns: repeat(auto-fill, 15.5vw);
+    grid-auto-rows: 17vh;
+    height: 100%;
+    width: 32vw;
+    margin: 0 auto;
+    grid-gap: 0.5vh;
 }
 
 video {
