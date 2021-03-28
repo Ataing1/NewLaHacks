@@ -34,16 +34,26 @@ app.get('/new-room/:room', (req, res) => {
 	res.render('room', { roomId: req.params.room })
 })
 
+
+
 app.get('/new-room-student', (req, res) => {
-	res.redirect(`/new-room-student/${uuidV4()}`)
+	res.redirect(`/new-room-student/0`)
 })
 
 app.get('/new-room-student/:room', (req, res) => {
 	res.render('student', { roomId: req.params.room })
 })
 
+app.get('/new-room-student-1', (req, res) => {
+	res.redirect(`/new-room-student/1`)
+})
+
+app.get('/new-room-student-1/:room', (req, res) => {
+	res.render('student', { roomId: req.params.room })
+})
+
 app.get('/new-room-teacher', (req, res) => {
-	res.redirect(`/new-room-teacher/${uuidV4()}`)
+	res.redirect(`/new-room-teacher/5`)
 })
 
 app.get('/new-room-teacher/:room', (req, res) => {
