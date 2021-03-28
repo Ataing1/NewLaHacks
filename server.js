@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === 'development') {
 	console.log(process.env);
 }
 
+app.set('view engine', 'ejs')
 app.use(express.static(process.env.STATIC_DIR));
 
 app.get('/', (req, res) => {

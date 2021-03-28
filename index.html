@@ -12,9 +12,19 @@
 </body>
 <script>
     let roomButton = document.getElementById("newRoom");
-    // roomButton.addEventListener('click', function(e){
-	// 	e.preventDefault();
-    //     fetch('/new-room');
-    // })
+    roomButton.addEventListener('click', function(e){
+		e.preventDefault();
+		fetch('/new-room')
+			.then(response => {
+				// HTTP 301 response
+				// HOW CAN I FOLLOW THE HTTP REDIRECT RESPONSE?
+				if (response.redirected) {
+					window.location.href = response.url;
+				}
+			})
+			.catch(function(err) {
+				console.info(err + " url: " + url);
+			});
+    })
 </script>
 </html>
