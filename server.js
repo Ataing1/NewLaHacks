@@ -25,6 +25,12 @@ app.get('/new-room', (req, res) => {
 	res.redirect(`/${uuidV4()}`)
 })
 
+app.get('/new-room-student', (req, res) => {
+	res.redirect(`/views/student.ejs'`);
+})
+app.get('/new-room-teacher', (req, res) => {
+	res.redirect(`/${uuidV4()}`)
+})
 
 app.get('/:room', (req, res) => {
 	res.render('room', { roomId: req.params.room })

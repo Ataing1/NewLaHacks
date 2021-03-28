@@ -7,17 +7,17 @@
 <body>
     <div>Hello World</div>
     <button id="newRoom">click to open new room</button>
-    <button id="student" onclick="location.href='student.html';">GET STARTED</button>
-    <button id="teacher" onclick="location.href='teacher.html';">GET STARTED</button>
+    <button id="student">GET STARTED</button>
+    <button id="teacher">GET STARTED</button>
 </body>
 <script>
     let roomButton = document.getElementById("newRoom");
+    let studentButton = document.getElementById("student");
+    let teacherButton = document.getElementById("teacher");
     roomButton.addEventListener('click', function(e){
 		e.preventDefault();
 		fetch('/new-room')
 			.then(response => {
-				// HTTP 301 response
-				// HOW CAN I FOLLOW THE HTTP REDIRECT RESPONSE?
 				if (response.redirected) {
 					window.location.href = response.url;
 				}
@@ -26,5 +26,32 @@
 				console.info(err + " url: " + url);
 			});
     })
+	studentButton.addEventListener('click', function(e){
+		e.preventDefault();
+		fetch('/new-room-student')
+			.then(response => {
+				if (response.redirected) {
+					window.location.href = response.url;
+				}
+			})
+			.catch(function(err) {
+				console.info(err + " url: " + url);
+			});
+	})
+	teacherButton.addEventListener('click', function(e){
+		e.preventDefault();
+		fetch('/new-room-teacher')
+			.then(response => {
+				if (response.redirected) {
+					window.location.href = response.url;
+				}
+			})
+			.catch(function(err) {
+				console.info(err + " url: " + url);
+			});
+	})
+
+
+
 </script>
 </html>
